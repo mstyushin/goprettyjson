@@ -17,9 +17,9 @@ clean:
 	rm -rf out
 
 install:
-	cp out/$(BINARY_NAME) /usr/local/bin/
+	cp out/$(BINARY_NAME) $(GOPATH)/bin/
 	rm -rf out
 	$(GOCLEAN)
 
 uninstall:
-	rm -f /usr/local/bin/$(BINARY_NAME)
+	rm -f $(GOPATH)/bin/$(BINARY_NAME)
